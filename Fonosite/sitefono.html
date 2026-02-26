@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica de Fonoaudiologia</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #2bb3c0;
+    --secondary: #1e3a5f;
+    --light: #f4f9fb;
+    --dark: #1c1c1c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light);
+    color: var(--dark);
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 999;
+}
+
+nav .logo {
+    font-weight: 700;
+    color: var(--secondary);
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeDown 1s ease;
+}
+
+.hero p {
+    max-width: 600px;
+    margin-bottom: 30px;
+    animation: fadeUp 1s ease;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--secondary);
+}
+
+.btn-primary:hover {
+    background: var(--light);
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 50px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 32px;
+    color: var(--secondary);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* FORM */
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea, select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+footer {
+    background: var(--secondary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Animations */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Clínica Fono+</div>
+    <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#agendamento">Agendamento</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
+    <h1>Cuidando da Comunicação e Qualidade de Vida</h1>
+    <p>Atendimento especializado para crianças, adultos e idosos com foco em excelência clínica.</p>
+    <button class="btn btn-primary" onclick="scrollToSection('agendamento')">Agendar Consulta</button>
+</div>
+
+<section id="servicos">
+    <h2 class="section-title">Serviços</h2>
+    <div class="grid">
+        <div class="card">Avaliação Fonoaudiológica
+            <br>
+
+                🔹Queixa principal<br>
+
+                🔹Histórico gestacional e de desenvolvimento<br>
+
+                🔹Histórico médico (doenças, cirurgias, uso de medicamentos)<br>
+
+                🔹Histórico familiar<br>
+
+                🔹Desenvolvimento da fala e linguagem<br>
+
+                🔹Histórico escolar/profissional<br></div>
+        <div class="card">Terapia da Fala<br>
+                🔹Respiração oral<br>
+
+                🔹Mastigação inadequada<br>
+
+                🔹Deglutição atípica<br>
+
+                🔹Alterações após uso prolongado de chupeta ou mamadeira<br>
+        </div>
+        <div class="card">Motricidade Orofacial</div>
+        <div class="card">Voz Profissional</div>
+    </div>
+</section>
+
+<section id="especialidades">
+    <h2 class="section-title">Especialidades</h2>
+    <div class="grid">
+        <div class="card">Autismo</div>
+        <div class="card">Apraxia</div>
+        <div class="card">Dislexia</div>
+        <div class="card">Pós-AVC</div>
+    </div>
+</section>
+
+<section id="projetos">
+    <h2 class="section-title">Projetos</h2>
+    <div class="grid">
+        <div class="card">Projeto Comunicação Infantil</div>
+        <div class="card">Parceria com Escolas</div>
+        <div class="card">Atendimento Hospitalar</div>
+    </div>
+</section>
+
+<section id="agendamento">
+    <h2 class="section-title">Agende sua Consulta</h2>
+    <form id="formAgendamento">
+        <input type="text" id="nome" placeholder="Nome Completo" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="telefone" placeholder="Telefone" required>
+        <select required>
+            <option value="">Selecione a Especialidade</option>
+            <option>Infantil</option>
+            <option>Adulto</option>
+            <option>Voz</option>
+        </select>
+        <textarea placeholder="Observações"></textarea>
+        <button type="submit" class="btn btn-primary">Enviar Agendamento</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Clínica Fono+ - Todos os direitos reservados
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5511999999999" target="_blank">💬</a>
+
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+
+document.getElementById("formAgendamento").addEventListener("submit", function(e){
+    e.preventDefault();
+    const nome = document.getElementById("nome").value;
+    const telefone = document.getElementById("telefone").value;
+    
+    if(nome.length < 3){
+        alert("Nome inválido!");
+        return;
+    }
+
+    alert("Agendamento enviado com sucesso! Entraremos em contato.");
+});
+</script>
+
+</body>
+</html>
