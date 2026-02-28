@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica de Fonoaudiologia | Fono+</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav__brand">
+        <a class="logo" href="#topo" aria-label="Ir para o início">Clínica Fono+</a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a class="nav__link" href="#servicos">Serviços</a></li>
+        <li><a class="nav__link" href="#especialidades">Especialidades</a></li>
+        <li><a class="nav__link" href="#projetos">Projetos</a></li>
+        <li><a class="nav__link nav__link--cta" href="#agendamento">Agendamento</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section id="topo" class="hero">
+      <div class="container hero__content">
+        <h1>Cuidando da Comunicação e Qualidade de Vida</h1>
+        <p>Atendimento especializado para crianças, adultos e idosos com foco em excelência clínica.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#agendamento" data-scroll>Agendar Consulta</a>
+          <a class="btn btn--ghost" href="#servicos" data-scroll>Ver Serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="section">
+      <div class="container">
+        <h2 class="section-title">Serviços</h2>
+
+        <div class="grid">
+          <article class="card">
+            <h3 class="card__title">Avaliação Fonoaudiológica</h3>
+            <ul class="list">
+              <li>Queixa principal</li>
+              <li>Histórico gestacional e de desenvolvimento</li>
+              <li>Histórico médico (doenças, cirurgias, medicamentos)</li>
+              <li>Histórico familiar</li>
+              <li>Desenvolvimento da fala e linguagem</li>
+              <li>Histórico escolar/profissional</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Terapia da Fala</h3>
+            <ul class="list">
+              <li>Respiração oral</li>
+              <li>Mastigação inadequada</li>
+              <li>Deglutição atípica</li>
+              <li>Alterações após uso prolongado de chupeta/mamadeira</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Motricidade Orofacial</h3>
+            <p class="card__text">Avaliação e terapia para equilíbrio muscular e funções orais (mastigação, deglutição e respiração).</p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Voz Profissional</h3>
+            <p class="card__text">Cuidados e preparo vocal para professores, cantores, palestrantes e profissionais da voz.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="especialidades" class="section section--alt">
+      <div class="container">
+        <h2 class="section-title">Especialidades</h2>
+
+        <div class="grid">
+          <article class="card card--mini"><h3 class="card__title">Autismo</h3></article>
+          <article class="card card--mini"><h3 class="card__title">Apraxia</h3></article>
+          <article class="card card--mini"><h3 class="card__title">Dislexia</h3></article>
+          <article class="card card--mini"><h3 class="card__title">Pós-AVC</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="section">
+      <div class="container">
+        <h2 class="section-title">Projetos</h2>
+
+        <div class="grid">
+          <article class="card">
+            <h3 class="card__title">Projeto Comunicação Infantil</h3>
+            <p class="card__text">Ações e orientações para desenvolvimento de linguagem com suporte à família.</p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Parceria com Escolas</h3>
+            <p class="card__text">Triagens, palestras e acompanhamento em ambiente escolar.</p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Atendimento Hospitalar</h3>
+            <p class="card__text">Suporte fonoaudiológico em contextos clínicos e reabilitação.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="agendamento" class="section section--alt">
+      <div class="container">
+        <h2 class="section-title">Agende sua Consulta</h2>
+
+        <form id="formAgendamento" class="form" novalidate>
+          <div class="form__row">
+            <label for="nome">nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required minlength="3" />
+            <small class="error" data-error-for="nome"></small>
+          </div>
+
+          <div class="form__row">
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" required />
+            <small class="error" data-error-for="email"></small>
+          </div>
+
+          <div class="form__row">
+            <label for="telefone">telefone</label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              placeholder="(61) 99999-9999"
+              autocomplete="tel"
+              inputmode="tel"
+              required
+            />
+            <small class="error" data-error-for="telefone"></small>
+          </div>
+
+          <div class="form__row">
+            <label for="especialidade">especialidade</label>
+            <select id="especialidade" name="especialidade" required>
+              <option value="">Selecione</option>
+              <option value="Infantil">Infantil</option>
+              <option value="Adulto">Adulto</option>
+              <option value="Voz">Voz</option>
+              <option value="Motricidade Orofacial">Motricidade Orofacial</option>
+            </select>
+            <small class="error" data-error-for="especialidade"></small>
+          </div>
+          <div class="form__row">
+            <label for="data">Data preferencial</label>
+            <input type="date" id="data" name="data" required />
+            <small class="error" data-error-for="data"></small>
+
+          <div class="form__row">
+            <label for="observacoes">observacoes</label>
+            <textarea id="observacoes" name="observacoes" placeholder="Conte brevemente sua necessidade (opcional)" rows="4"></textarea>
+          </div>
+
+          <div class="form__actions">
+            <button type="submit" class="btn btn--primary">Enviar Agendamento</button>
+            <button type="button" id="btnWhats" class="btn btn--whats" title="Enviar pelo WhatsApp">
+              Enviar via WhatsApp
+            </button>
+          </div>
+
+          <p class="form__hint" id="formHint" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Clínica Fono+ — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  
+  <a class="whatsapp-float" id="whatsFloat" href="#" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    💬
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
